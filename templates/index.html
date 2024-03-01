@@ -1,0 +1,69 @@
+<!-- Made by Vibhaw Kureel -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BodyFat Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>BodyFat Estimator</h1>
+
+    <form method="post" action="{{ url_for('predict') }}">
+        <label for="density">Density:</label>
+        <input type="text" name="density" placeholder="Use 1.055574 if you don't have instrument to calculate" required><br>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" placeholder="years" required><br>
+
+        <label for="weight">Weight:</label>
+        <input type="text" name="weight" placeholder="lbs" required><br>
+
+        <label for="height">Height:</label>
+        <input type="text" name="height" placeholder="inches" required><br>
+
+        <label for="neck">Neck:</label>
+        <input type="text" name="neck" placeholder="circumference in cm" required><br>
+
+        <label for="chest">Chest:</label>
+        <input type="text" name="chest" placeholder="circumference in cm" required><br>
+
+        <label for="abdomen">Abdomen:</label>
+        <input type="text" name="abdomen" placeholder="circumference in cm" required><br>
+
+        <label for="hip">Hip:</label>
+        <input type="text" name="hip" placeholder="circumference in cm" required><br>
+
+        <label for="thigh">Thigh:</label>
+        <input type="text" name="thigh" placeholder="circumference in cm" required><br>
+
+        <label for="knee">Knee:</label>
+        <input type="text" name="knee" placeholder="circumference in cm" required><br>
+
+        <label for="ankle">Ankle:</label>
+        <input type="text" name="ankle" placeholder="circumference in cm" required><br>
+
+        <label for="biceps">Biceps:</label>
+        <input type="text" name="biceps" placeholder="circumference in cm(extended)" required><br>
+
+        <label for="forearm">Forearm:</label>
+        <input type="text" name="forearm" placeholder="circumference in cm" required><br>
+
+        <label for="wrist">Wrist:</label>
+        <input type="text" name="wrist" placeholder="circumference in cm" required><br>
+
+        <button type="submit">Predict</button>
+        
+        {% if prediction is not none %}
+        <p style="display:inline-block; margin-left:10px;">Predicted BodyFat: {{ prediction }}</p>
+        {% endif %}
+    
+    </form> 
+    
+    <footer>
+        <p>2024 MyWebsite</p>
+    </footer>
+
+</body>
+</html>
