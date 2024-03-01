@@ -1,59 +1,78 @@
+/* style.css */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
     margin: 0;
     padding: 0;
+    background-color: #1e1e1e;
 }
 
 h1 {
-    color: #2c3e50;
     text-align: center;
+    margin-top: 20px;
+    background: linear-gradient(to right, #ff5733, #ffa500, #ffd700, #32cd32, #87ceeb, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideIn 1s ease-in-out forwards;
 }
 
 form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
-    padding: 30px;
-    background-color: #ecf0f1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out forwards;
 }
 
 label {
     display: block;
-    margin-bottom: 12px;
-    color: #3498db;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-input {
-    width: calc(100% - 16px);
-    padding: 12px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    border: 1px solid #bdc3c7;
-    border-radius: 6px;
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #e74c3c;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
     color: #fff;
-    padding: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
-    background-color: #c0392b;
+    background-color: #45a049;
 }
 
 p {
-    margin-top: 20px;
+    text-align: center;
     font-size: 18px;
-    color: #14b155;
-    background-color: #ecf0f1;
-    padding: 10px;
-    border-radius: 6px;
-    display: inline-block;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* Animation keyframes for sliding in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
